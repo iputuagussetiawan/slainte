@@ -1,0 +1,1 @@
+{"version":3,"file":"/build/js/privacy-notice.js","mappings":";;;;;AAAAA,KAAK,CAAC,qBAAqB,CAAC,C","sources":["webpack:///./src/js/pages/privacy-notice.js"],"sourcesContent":["alert('from privacy notice')"],"names":["alert"],"sourceRoot":""}

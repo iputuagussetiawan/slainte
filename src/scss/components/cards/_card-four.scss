@@ -1,0 +1,96 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-four{
+    @include imageRatio(140,140,true,cover,'image');
+    display: flex;
+    align-items: center;
+    min-height: 176px;
+    padding: 24px;
+    height: 100%;
+    background: $white;
+    box-shadow: 0px 27px 72px rgba(48, 52, 77, 0.07), 0px 6.0308px 16.0821px rgba(48, 52, 77, 0.0417275), 0px 1.79553px 4.78807px rgba(48, 52, 77, 0.0282725);
+    border-radius: 8px;
+
+    &:hover  &__image{
+        transform: scale(1.2);
+    }
+
+    &:hover  &__title,
+    &:hover  &__link,
+    &:hover  &__icon{
+       color: $secondary-80;
+    }
+
+    &:hover  &__icon{
+        left: 10px;
+     }
+
+    &__image-container{
+        overflow: hidden;
+        border-radius: 8px;
+    }
+    &__image{
+        transition: 1s ease;
+    }
+    &__info-container{
+        padding-left: 16px;
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: $neutral-100; 
+        transition: 0.4s ease;
+    }
+
+    &__link{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: $primary-80;
+        vertical-align: middle;
+        transition: 0.4s ease;
+    }
+
+    &__icon{
+        position: relative;
+        left: 0px;
+        color: $primary-80;
+        vertical-align: middle;
+        transition: 0.4s ease;
+    }
+
+    @media only screen and (max-width: 1399.98px) {
+        &__title{
+            font-size: 22px;
+            line-height: 30px;
+        }
+    
+        &__link{
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        padding: 16px;
+        &__title{
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        @include imageRatio(479,192,true,cover,'image');
+        flex-direction: column;
+        align-items: flex-start;
+        &__image-container{
+            margin-bottom:16px ;
+        }
+        &__info-container{
+            padding-left: 0px;
+        }
+    }
+}

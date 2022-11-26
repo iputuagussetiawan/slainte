@@ -1,0 +1,14 @@
+.page404__title {
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+}
+@media only screen and (max-width: 991.98px) {
+  .page404__title {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+
+/*# sourceMappingURL=page404.css.map*/

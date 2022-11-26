@@ -1,0 +1,1 @@
+{"version":3,"file":"/build/js/single.js","mappings":";;;;;AAAAA,KAAK,CAAC,QAAQ,CAAC,C","sources":["webpack:///./src/js/pages/single.js"],"sourcesContent":["alert('single');"],"names":["alert"],"sourceRoot":""}

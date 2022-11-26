@@ -1,0 +1,28 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-three{
+    @include imageRatio(48,48,true,contain,'icon');
+    padding: 32px;
+    height: 100%;
+    background: $secondary-30;
+    border: 1px solid $secondary-80;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    min-height: 176px;
+
+    &__info{
+        margin-bottom: 0px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $neutral-90;        
+    }
+
+    &__info-container{
+        padding-left: 32px;
+    }
+
+
+}

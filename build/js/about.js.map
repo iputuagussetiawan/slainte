@@ -1,0 +1,1 @@
+{"version":3,"file":"/build/js/about.js","mappings":";;;;;AAAAA,KAAK,CAAC,OAAO,CAAC,C","sources":["webpack:///./src/js/pages/about.js"],"sourcesContent":["alert('about')"],"names":["alert"],"sourceRoot":""}

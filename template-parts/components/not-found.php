@@ -1,0 +1,1 @@
+<h3 class="not-found"><?php echo pll__('Data Not Found'); ?></h3>

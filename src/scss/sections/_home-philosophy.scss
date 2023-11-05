@@ -1,0 +1,29 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+
+.home-philosophy{
+    &__subtitle{
+        margin-bottom: 26px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.385em;
+        color: $black;
+    }
+    &__title{
+        margin-bottom: 26px;
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 27px;
+        color: $black;
+    }
+
+    &__description{
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 25px;
+        color: $black; 
+    }
+}

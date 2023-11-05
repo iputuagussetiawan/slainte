@@ -1,131 +1,107 @@
 @use '../config/_variable.scss' as *;
 @use '../config/_mixin.scss' as *;
 
-.banner{
-	@include imageRatio(1728,844);
-	background-color: $primary;;
-	&__inner{
+.banner {
+	@include imageRatio(1728, 844);
+	@include imageRatio(150, 176,true,contain,'logo-mobile');
+	background-color: $primary;
+	position: relative;
+
+
+	&__logo-mobile-wrapper{
+		display: none;
+		width: 150px;
+		position: absolute;
+		top: 120px;
+		z-index: 10;
+		left:50%;
+		transform: translateX(-50%);
+	}
+
+	&__inner {
+		position: relative;
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		align-items: center;
 		gap: 31px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 75%;
+			height: 100%;
+			background-color: #867E6F;
+			z-index: 2;
+		}
 	}
 
-	&__image-container{
-		grid-column: 1/10;
+	&__image-container {
+		grid-column: 1/13;
 		grid-row: 1;
 		z-index: 1;
 		height: 100vh;
 		min-height: 550px;
 	}
 
-	&__info-container{
+	&__info-container {
 		padding: 70px 0px;
 		grid-column: 1/6;
 		grid-row: 1;
 		z-index: 2;
 	}
 
-	&__container{
-		padding: 90px 0px;
+	&__container {
 		display: grid;
-		grid-template-columns: repeat(12,1fr);
+		grid-template-columns: repeat(12, 1fr);
 		position: absolute;
-		top: 100px;
+		top: 25%;
 		left: 50%;
-		transform: translate(-50%,0px);
+		transform: translate(-50%, 0px);
 		z-index: 2;
 	}
 
-	@media only screen and (max-width: 1399.98px) {
-		&__btn-wrapper{
+	@media only screen and (max-width: 991.98px) {
+		min-height: 1080px;
+		&__logo-mobile-wrapper{
 			display: block;
 		}
-		&__image-container {
-			grid-column: 4/13;
+		&__inner {
+			&::before {
+				content: '';
+				position: absolute;
+				top: 80%;
+				right: 0px;
+				bottom: 0px;
+				left: 0;
+				z-index: 2;
+			}
 		}
-		&__title{
-			font-size: 32px;
-			line-height: 45px;
-		}
-		&__description{
-			font-size: 16px;
-			line-height: 26px;
-		}
-	}
-
-	@media only screen and (max-width: 1199.98px) {
-		&__info-container{
-			grid-column: 1/7;
-		}
-		&__image-container {
-			grid-column: 5/13;
-		}
-
-		&__title{
-			font-size: 27px;
-			line-height: 40px;
-		}
-		&__description{
-			font-size: 14px;
-			line-height: 22px;
-		}
-	}
-	@media only screen and (max-width: 991.98px) {
-		&__info-container {
-			grid-column: 1/8;
-			
+		&__container {
+			position: absolute;
+			top: auto;
+			bottom: 48px;
 		}
 		&__image-container {
-			grid-column: 3/13;
-		}
-
-		&__title {
-			font-size: 24px;
-			line-height: 32px;
-		}
-	}
-
-	@media only screen and (max-width: 767.98px) {
-		&__inner{
-			margin-right: 7.5%;
-			padding-top: 100px;
-			padding-right: 0px;
-			padding-left: 0px;
-		}
-		&__info-container {
-			grid-column: 1/13;
 			grid-row: 1;
-			padding: 0px;
-		}
-		&__image-container {
 			grid-column: 1/13;
-			grid-row: 2;
 		}
-		&__btn-wrapper{
-			display: grid;
-			gap: 24px;
+		&__info-container {
+			grid-row: 2;
+			grid-column: 1/13;
 		}
 	}
 
-	@media only screen and (max-width: 575.98px) {
-		&__inner{
-			gap: 0px;
-		}
-		&__btn-wrapper{
-			display: grid;
-			grid-template-columns: 1fr;
-			gap: 12px;
-		}
-	}
 }
 
-.form-subscriber{
+.form-subscriber {
 	grid-column: 8/13;
-	background-color:$white;
+	background-color: $white;
 	padding: 42px 51px;
 
-	&__subtitle{
+	&__subtitle {
 		margin-bottom: 19px;
 		font-weight: 400;
 		font-size: 12px;
@@ -135,7 +111,7 @@
 		color: $black;
 	}
 
-	&__title{
+	&__title {
 		margin-bottom: 19px;
 		font-family: $secondary-font;
 		font-weight: 400;
@@ -145,11 +121,60 @@
 		color: $black;
 	}
 
-	&__description{
+	&__description {
 		font-family: $secondary-font;
 		font-weight: 400;
 		font-size: 10px;
 		line-height: 211.5%;
 		margin-bottom: 19px;
 	}
+
+	@media only screen and (max-width: 991.98px) {
+		padding: 42px 24px;
+		border-radius: 40px;
+		grid-column: 1/13;
+		box-shadow: 2px 5px 19px rgba(0, 0, 0, 0.37);
+		.btn-primary{
+			border-radius: 100px;
+			padding: 16px 32px;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: 0.185em;
+			text-transform: uppercase;
+			color: #FFFFFF;
+		}
+		.form-control-custom{
+			text-align: center;
+		}
+
+		&__subtitle{
+			display: none;
+		}
+
+		&__title{
+			margin-bottom: 10px;
+			font-weight: 700;
+			font-size: 22px;
+			line-height: 144.5%;
+			text-align: center;
+			text-transform: capitalize;
+			color: $black;
+		}
+		&__description{
+			margin-bottom: 42px;
+			font-style: italic;
+			font-weight: 400;
+			font-size: 19px;
+			line-height: 155.5%;
+			text-align: center;
+			color: $black;
+		}
+
+		&__btn-wrapper{
+			margin-top: 32px;
+			display: grid;
+		}
+	}
+
 }

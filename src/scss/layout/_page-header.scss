@@ -5,126 +5,90 @@
 -----------------------------------------*/
 
 .page-header{
-	@include imageRatio(690,567);
-	&__grid{
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		align-items: center;
-		gap: 30px;
-	}
+	position: relative;
+	@include imageRatio(1728,608);
 
-	&__info-container{
-		padding: 70px 0px;
-		grid-column: 1/7;
-		grid-row: 1;
-		z-index: 2;
-	}
-
-	&__btn-wrapper{
-		display: grid;
-		grid-template-columns:repeat(2, 1fr);
-		gap: 30px;
-	}
-
-	&__image-container{
-		grid-column: 7/13;
-		grid-row: 1;
-		z-index: 1;
-	}
-
-	&__subtitle{
-		margin-bottom: 4px;
-		font-weight: 500;
-		font-size: 18px;
-		line-height: 28px;
-		color: $secondary-80;
-
-		
+	&__container{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		text-align: center;
 	}
 
 	&__title{
-		margin-bottom: 20px;
-		font-weight: 700;
-		font-size: 40px;
-		line-height: 50px;
-		text-transform: capitalize;
-		color: $neutral-100;
+		margin-bottom: 16px;
+		font-size: 64px;
+		font-family: $secondary-font;
+		color: $white;
 	}
-	&__content{
+
+	&__subtitle{
+		margin-bottom: 21px;
+		font-family: $secondary-font;
 		font-weight: 400;
 		font-size: 18px;
-		line-height: 28px;
-		color: $neutral-90;
+		line-height: 146.5%;
+		text-align: center;
+		text-transform: capitalize;
+		color: $white;
+	}
 
-		p{
-			margin-bottom: 32px;
-		}
+	&__description{
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 211.5%;
+		text-align: center;
+		text-indent: 4px;
+		color: $white;
 	}
 
 	@media only screen and (max-width: 1399.98px) {
-		&__btn-wrapper{
-			display: block;
-		}
-		&__info-container {
-			grid-column: 1/8;
-			padding: 0px 10% 0px 0px;
-		}
-		&__image-container {
-			grid-column: 7/13;
-		}
+		@include imageRatio(1728,970);
+	}
+
+	@media only screen and (max-width: 1199.98px) {
 		&__title{
-			font-size: 32px;
-			line-height: 42px;
-		}
-		&__description{
-			font-size: 16px;
-			line-height: 26px;
+			font-size: 47px;
 		}
 	}
 
 	@media only screen and (max-width: 991.98px) {
-		&__info-container {
-			padding: 0px;
+		@include imageRatio(900,820);
+		&__title{
+			font-size: 42px;
 		}
 	}
 
-	@media only screen and (max-width: 1199.98px) {
-		&__info-container {
-			grid-column: 1/13;
-			grid-row: 1;
-			
+	@media only screen and (max-width: 767.98px) {
+		@include imageRatio(767,970);
+
+		&__title{
+			font-weight: 400;
+			font-size: 39px;
+			line-height: 146.5%;
 		}
-		&__image-container {
-			grid-column: 1/13;
-			grid-row: 2;
+
+		&__subtitle{
+			font-weight: 400;
+			font-size: 17px;
 		}
 
 		&__description{
-			font-size: 14px;
-			line-height: 22px;
-		}
-	}
-	
-
-	@media only screen and (max-width: 767.98px) {
-		&__btn-wrapper{
-			display: grid;
-			gap: 24px;
-		}
-
-		&__content{
-			font-size: 16px;
-			line-height: 26px;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 211.5%;
 		}
 	}
 
 	@media only screen and (max-width: 575.98px) {
-		&__btn-wrapper{
-			display: grid;
-			grid-template-columns: 1fr;
-			gap: 12px;
+		@include imageRatio(430,650);
+		&__title{
+			font-size: 32px;
+			line-height: 146.5%;
 		}
 	}
+	
 }
 /*-----------------------------------------
 /////////////////////////// PAGE HEADER END

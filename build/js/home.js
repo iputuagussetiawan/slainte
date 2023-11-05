@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/swiper/swiper-bundle.min.css":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/swiper/swiper-bundle.min.css ***!
-  \*************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[14].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[14].oneOf[1].use[2]!./node_modules/swiper/swiper-bundle.min.css":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[14].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[14].oneOf[1].use[2]!./node_modules/swiper/swiper-bundle.min.css ***!
+  \***************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -9453,7 +9453,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./swiper-bundle.min.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/swiper/swiper-bundle.min.css");
+/* harmony import */ var _css_loader_dist_cjs_js_ruleSet_1_rules_14_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_14_oneOf_1_use_2_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../css-loader/dist/cjs.js??ruleSet[1].rules[14].oneOf[1].use[1]!../postcss-loader/dist/cjs.js??ruleSet[1].rules[14].oneOf[1].use[2]!./swiper-bundle.min.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[14].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[14].oneOf[1].use[2]!./node_modules/swiper/swiper-bundle.min.css");
 
             
 
@@ -9462,11 +9462,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_ruleSet_1_rules_14_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_14_oneOf_1_use_2_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_ruleSet_1_rules_14_oneOf_1_use_1_postcss_loader_dist_cjs_js_ruleSet_1_rules_14_oneOf_1_use_2_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -22670,118 +22670,38 @@ __webpack_require__.r(__webpack_exports__);
 // import styles bundle
 
 gsap__WEBPACK_IMPORTED_MODULE_2__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__["default"]);
-
-//gsap.to(".banner__title", {rotation: 27, x: 100, duration: 1});
-
-var testimonialSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.testimonials-slider ', {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  speed: 1000,
-  loop: false,
-  // autoplay: {
-  //     delay: 1,
-  // },
-  freeMode: {
-    enabled: true
-  },
-  //touchRatio:1,
-  pagination: {
-    el: ".swiper-pagination-testimonial",
-    clickable: true
-  },
-  navigation: {
-    nextEl: ".swiper-button-next-testimonial",
-    prevEl: ".swiper-button-prev-testimonial"
-  },
-  breakpoints: {
-    1024: {
-      spaceBetween: 24,
-      slidesPerView: 2
-    },
-    1440: {
-      spaceBetween: 24,
-      slidesPerView: 2
-    }
-  }
-});
 window.addEventListener("load", function () {
-  var ourTechnologySliderContainer = document.querySelector("#our_technology_slider");
-  var ourTechnologySlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.our-technology__slider', {
-    slidesPerView: 4,
+  var bannerSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.banner__slider', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    speed: 500,
     loop: true,
-    freeMode: {
-      enabled: true
-    },
+    effect: 'fade',
     autoplay: {
-      delay: 1
+      delay: 3000
     },
-    speed: 3000,
-    // grid: {
-    //   rows: 2,
+    // freeMode: {
+    //     enabled: true,
     // },
-    spaceBetween: 30,
+    //touchRatio:1,
+    // pagination: {
+    //     el: ".swiper-pagination-testimonial",
+    //     clickable: true,
+    // },
+    // navigation: {
+    //     nextEl: ".swiper-button-next-testimonial",
+    //     prevEl: ".swiper-button-prev-testimonial",
+    // }, 
     breakpoints: {
-      768: {
-        spaceBetween: 24,
-        slidesPerView: 6
-      },
       1024: {
-        spaceBetween: 24,
-        slidesPerView: 8
+        spaceBetween: 24
       },
       1440: {
-        spaceBetween: 30,
-        slidesPerView: 10
+        spaceBetween: 24
       }
     }
   });
-  ourTechnologySliderContainer.addEventListener("mouseenter", function (e) {
-    ourTechnologySlider.autoplay.stop();
-  });
-  ourTechnologySliderContainer.addEventListener("mouseleave", function (e) {
-    ourTechnologySlider.autoplay.start();
-  });
-});
-function format_number(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-;
-function counterAction(el, value) {
-  gsap__WEBPACK_IMPORTED_MODULE_2__["default"].from(value, {
-    scrollTrigger: ".our-approach",
-    duration: 3,
-    ease: 'circ.out',
-    val: 0,
-    roundProps: 'val',
-    onUpdate: function onUpdate() {
-      el.innerText = format_number(value.val);
-    }
-  });
-}
-function counterSubscriber() {
-  var totalSubscriberYT = document.getElementById('complatedProject'),
-    totalSubscriberYTValue = {
-      val: parseInt(totalSubscriberYT.dataset.value)
-    };
-  var totalViewYT = document.getElementById('yearExperience'),
-    totalViewYTValue = {
-      val: parseInt(totalViewYT.dataset.value)
-    };
-  var merchanSold = document.getElementById('businessProductivity'),
-    merchanSoldValue = {
-      val: parseInt(merchanSold.dataset.value)
-    };
-  var appDownload = document.getElementById('decreaseCost'),
-    appDownloadValue = {
-      val: parseInt(appDownload.dataset.value)
-    };
-  counterAction(totalSubscriberYT, totalSubscriberYTValue);
-  counterAction(totalViewYT, totalViewYTValue);
-  counterAction(merchanSold, merchanSoldValue);
-  counterAction(appDownload, appDownloadValue);
-}
-window.addEventListener("load", function () {
-  counterSubscriber();
+  var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".mySwiper", {});
 });
 })();
 

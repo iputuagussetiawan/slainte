@@ -4,13 +4,12 @@
 */
 ?>
 <?php get_header(); ?>
-<main>
+<main class="m-0">
     <?php
-    get_template_part('template-parts/sections/about', 'banner');
-    get_template_part('template-parts/sections/about', 'our-different');
-    get_template_part('template-parts/sections/about', 'our-partners');
-    get_template_part('template-parts/sections/about', 'trustedby');
-    get_template_part('template-parts/sections/about', 'why-us');
+    get_template_part('template-parts/sections/page', 'header');
+    get_template_part('template-parts/sections/about', 'welcome');
+    get_template_part('template-parts/sections/about', 'building');
+    get_template_part('template-parts/sections/about', 'garden');
     ?>
 </main>
 <?php get_footer(); ?>

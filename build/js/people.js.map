@@ -1,0 +1,1 @@
+{"version":3,"file":"/build/js/people.js","mappings":";;;;;AAAAA,KAAK,CAAC,QAAQ,CAAC,C","sources":["webpack:///./src/js/pages/people.js"],"sourcesContent":["alert('people')"],"names":["alert"],"sourceRoot":""}

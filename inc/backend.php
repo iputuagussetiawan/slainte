@@ -1,5 +1,5 @@
-<?php 
-    //custom logo
+<?php
+//custom logo
 function tmdr_custom_logo_setup()
 {
     $defaults = array(
@@ -21,30 +21,33 @@ function tmdr_change_logo_class($html)
 }
 add_filter('get_custom_logo', 'tmdr_change_logo_class');
 
-function tmdr_login_css() { 
-    $custom_logo = get_theme_mod( 'custom_logo' );
-    $logo = wp_get_attachment_image_src( $custom_logo , 'full' );
-  
-    ?>
+function tmdr_login_css()
+{
+    $custom_logo = get_theme_mod('custom_logo');
+    $logo = wp_get_attachment_image_src($custom_logo, 'full');
+
+?>
     <style type="text/css">
         #login h1 a {
             background-image: url(<?php echo $logo[0] ?>);
             height: 164px;
-            width: 164px;
+            width: 80px;
             /* margin-bottom: 10px; */
             background-position: bottom;
             background-size: contain;
             background-repeat: no-repeat;
         }
+
         body {
-            background-color: #fff!important;
+            background-color: #dddddd !important;
         }
+
         .login form {
-            border: none!important;
-            box-shadow: none!important;
+            border: none !important;
+            box-shadow: none !important;
         }
     </style>
-    <?php
+<?php
 }
-add_action( 'login_enqueue_scripts', 'tmdr_login_css' );
+add_action('login_enqueue_scripts', 'tmdr_login_css');
 ?>

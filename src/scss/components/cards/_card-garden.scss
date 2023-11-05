@@ -1,0 +1,52 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-garden {
+	@include imageRatio(725,417);
+	padding: 42px 32px;
+
+	&__image-container{
+		margin-bottom: 39px;
+	}
+	&__title{
+		margin-bottom: 39px;
+		font-weight: 400;
+		font-size: 42px;
+		line-height: 121.5%;
+		color: #000000;
+	}
+	&__description{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 211.5%;
+		color: #000000;
+	}
+
+	@media only screen and (max-width: 767.98px) {
+		padding: 0px;
+
+		&__title{
+			text-align: center;
+			position: relative;
+			margin-bottom: 62px;
+			font-size: 27px;
+			line-height: 121.5%;
+
+			&::before{
+				content: "";
+				position: absolute;
+				left: 50%;
+				bottom: -30px;
+				width: 30%;
+				height: 1px;
+				transform: translateX(-50%);
+				border: 2px solid rgba(0, 0, 0, 0.14);
+			}
+		}
+
+		&__image-container{
+			margin-bottom: 31px;
+		}
+	}
+	
+}

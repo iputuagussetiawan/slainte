@@ -1,1 +1,0 @@
-{"version":3,"file":"/build/js/elnvoicing.js","mappings":";;;;;AAAAA,KAAK,CAAC,YAAY,CAAC,C","sources":["webpack:///./src/js/pages/elnvoicing.js"],"sourcesContent":["alert('elnvoicing')"],"names":["alert"],"sourceRoot":""}

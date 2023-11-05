@@ -1,1 +1,0 @@
-{"version":3,"file":"/build/js/page404.js","mappings":";;;;;AAAAA,KAAK,CAAC,UAAU,CAAC,C","sources":["webpack:///./src/js/pages/page404.js"],"sourcesContent":["alert('from 404')"],"names":["alert"],"sourceRoot":""}

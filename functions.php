@@ -5,8 +5,6 @@ require get_template_directory() . '/inc/frontend.php';
 require get_template_directory() . '/inc/backend.php';
 //require get_template_directory() . '/inc/polylang.php';
 
-//register API
-
 //Theme Assets
 function tmdr_script_enqueue()
 {
@@ -24,65 +22,51 @@ function tmdr_script_enqueue()
         wp_enqueue_script('home_js', get_template_directory_uri() . '/build/js/home.js', array(), $themeVersion, true);
     }
 
-    if (is_page_template('page-our-approach.php')) {
-        wp_enqueue_style('page-approach_css', get_template_directory_uri() . '/build/css/approach.css', array(), $themeVersion, 'all');
-        wp_enqueue_script('page-approach_js', get_template_directory_uri() . '/build/js/approach.js', array(), $themeVersion, true);
+    if (is_page_template('page-wine.php')) {
+        wp_enqueue_style('wine_css', get_template_directory_uri() . '/build/css/wine.css', array(), $themeVersion, 'all');
+        wp_enqueue_script('wine_js', get_template_directory_uri() . '/build/js/wine.js', array(), $themeVersion, true);
     }
 
-    if (is_page_template('page-sourcetopay.php')) {
-        wp_enqueue_style('page-sourcetopay-css', get_template_directory_uri() . '/build/css/sourcetopay.css', array(), $themeVersion, 'all');
-        wp_enqueue_script('page-sourcetopay-js', get_template_directory_uri() . '/build/js/sourcetopay.js', array(), $themeVersion, true);
+    if (is_page_template('page-people.php')) {
+        wp_enqueue_style('people_css', get_template_directory_uri() . '/build/css/people.css', array(), $themeVersion, 'all');
+        wp_enqueue_script('people_js', get_template_directory_uri() . '/build/js/people.js', array(), $themeVersion, true);
     }
 
-    if (is_page_template('page-elnvoicing.php')) {
-        wp_enqueue_style('page-elnvoicing-css', get_template_directory_uri() . '/build/css/elnvoicing.css', array(), $themeVersion, 'all');
-        wp_enqueue_script('page-elnvoicing-js', get_template_directory_uri() . '/build/js/elnvoicing.js', array(), $themeVersion, true);
-    }
-
-    if (is_page_template('page-B2BeCommerce.php')) {
-        wp_enqueue_style('page-B2BeCommerce-css', get_template_directory_uri() . '/build/css/b2becommerce.css', array(), $themeVersion, 'all');
-        wp_enqueue_script('page-B2BeCommerce-js', get_template_directory_uri() . '/build/js/b2becommerce.js', array(), $themeVersion, true);
-    }
-
-    if (is_page_template('page-news.php')) {
-        wp_enqueue_style('page-news-css', get_template_directory_uri() . '/build/css/news.css', array(), $themeVersion, 'all');
-        wp_enqueue_script('page-news-js', get_template_directory_uri() . '/build/js/news.js', array(), $themeVersion, true);
-    }
-
-    if (is_page_template('page-case-studies.php')) {
-        wp_enqueue_style('page-case-studies-css', get_template_directory_uri() . '/build/css/case-studies.css', array(), $themeVersion, 'all');
-        wp_enqueue_script('page-case-studies-js', get_template_directory_uri() . '/build/js/case-studies.js', array(), $themeVersion, true);
-    }
-
-    if (is_page_template('page-thought-leadership.php')) {
-        wp_enqueue_style('page-thought-leadership-css', get_template_directory_uri() . '/build/css/thought-leadership.css', array(), $themeVersion, 'all');
-        wp_enqueue_script('page-thought-leadership-js', get_template_directory_uri() . '/build/js/thought-leadership.js', array(), $themeVersion, true);
+    if (is_page_template('page-winemaker.php')) {
+        wp_enqueue_style('winemaker_css', get_template_directory_uri() . '/build/css/winemaker.css', array(), $themeVersion, 'all');
+        wp_enqueue_script('winemaker_js', get_template_directory_uri() . '/build/js/winemaker.js', array(), $themeVersion, true);
     }
 
     if (is_page_template('page-about.php')) {
-        wp_enqueue_style('page-about-css', get_template_directory_uri() . '/build/css/about.css', array(), $themeVersion, 'all');
-        wp_enqueue_script('page-about-js', get_template_directory_uri() . '/build/js/about.js', array(), $themeVersion, true);
+        wp_enqueue_style('about_css', get_template_directory_uri() . '/build/css/about.css', array(), $themeVersion, 'all');
+        wp_enqueue_script('about_js', get_template_directory_uri() . '/build/js/about.js', array(), $themeVersion, true);
     }
 
     if (is_page_template('page-contact.php')) {
-        wp_enqueue_style('page-contact-css', get_template_directory_uri() . '/build/css/contact.css', array(), $themeVersion, 'all');
-        wp_enqueue_script('page-contact-js', get_template_directory_uri() . '/build/js/contact.js', array(), $themeVersion, true);
+        wp_enqueue_style('contact_css', get_template_directory_uri() . '/build/css/contact.css', array(), $themeVersion, 'all');
+        wp_enqueue_script('locationmap_js', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDfGcaDJ1vOSxuxARS_kOVEmN-SOxVfIBw', array(), $themeVersion, true);
+        wp_enqueue_script('contact_js', get_template_directory_uri() . '/build/js/contact.js', array(), $themeVersion, true);
     }
 
-    if (is_page_template('page-privacy-notice.php')) {
-        wp_enqueue_style('page-privacy-notice-css', get_template_directory_uri() . '/build/css/privacy-notice.css', array(), $themeVersion, 'all');
-        wp_enqueue_script('page-privacy-notice-js', get_template_directory_uri() . '/build/js/privacy-notice.js', array(), $themeVersion, true);
-    }
-
-    if (is_single()) {
-        wp_enqueue_style('single-css', get_template_directory_uri() . '/build/css/single.css', array(), $themeVersion, 'all');
-        wp_enqueue_script('single-js', get_template_directory_uri() . '/build/js/single.js', array(), $themeVersion, true);
+    if (is_page_template('page-blog.php')) {
+        wp_enqueue_style('blog_css', get_template_directory_uri() . '/build/css/blog.css', array(), $themeVersion, 'all');
+        wp_enqueue_script('blog_js', get_template_directory_uri() . '/build/js/blog.js', array(), $themeVersion, true);
     }
 
     if (is_404()) {
         wp_enqueue_style('page404_css', get_template_directory_uri() . '/build/css/page404.css', array(), $themeVersion, 'all');
         wp_enqueue_script('page404_js', get_template_directory_uri() . '/build/js/page404.js', array(), $themeVersion, true);
     }
+
+    if (is_single()) {
+        wp_enqueue_style('single-css', get_template_directory_uri() . '/build/css/single.css', array(), $themeVersion, 'all');
+        // wp_enqueue_script('single-js', get_template_directory_uri() . '/build/js/single.js', array(), $themeVersion, true);
+    }
+
+    wp_localize_script('contact_js', 'locationData', array(
+        'theme_url' => get_template_directory_uri(),
+        'dataLocation' => json_encode(getLocation()),
+    ));
 }
 add_action('wp_enqueue_scripts', 'tmdr_script_enqueue');
 
@@ -100,7 +84,6 @@ add_filter('get_the_archive_title', function ($title) {
     }
     return $title;
 });
-
 //fuction for hide super usery
 add_action('pre_user_query', 'yoursite_pre_user_query');
 function yoursite_pre_user_query($user_searchs)
@@ -111,7 +94,6 @@ function yoursite_pre_user_query($user_searchs)
         global $wpdb;
     }
 }
-
 function wpb_set_post_views($postID)
 {
     $count_key = 'wpb_post_views_count';
@@ -157,12 +139,54 @@ function update_counter_ajax()
 add_action('wp_ajax_update_counter', 'update_counter_ajax');
 add_action('wp_ajax_nopriv_update_counter', 'update_counter_ajax');
 
-
-
-
 function GetYouTubeId($url)
 {
     preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $match);
     $youtube_id = $match[1];
     return $youtube_id;
 }
+
+
+function getLocation()
+{
+    $locationDataArray = [];
+    $locationData = new WP_Query(array(
+        'posts_per_page' => -1,
+        'post_type' => 'location',
+        'post_status'   => 'publish',
+        'orderby' => 'date',
+        'order' => 'ASC',
+    ));
+    while ($locationData->have_posts()) :
+        $locationData->the_post();
+        $locationID = get_the_ID();
+        $locationName = get_the_title();
+        $locationAddress = get_field('location_address');
+        $locationLat = get_field('location_lat');
+        $locationLang = get_field('location_lang');
+        $locationImage = get_field('map_image');
+        $urlLocationImage = '';
+        if ($locationImage) :
+            $urlLocationImage  = $locationImage['url'];
+        endif;
+        $dataLocation = array(
+            'propertyID' =>  $locationID,
+            'locationName' => $locationName,
+            'locationAddress' => $locationAddress,
+            'locationLat' => (int)$locationLat,
+            'locationLang' => (int)$locationLang,
+            'coord' => array(
+                'lat' => (float)$locationLat,
+                'lng' => (float)$locationLang
+            ),
+            'content' => '<div class="card-map-location"><div class="card-map-location__info-container"><h4 class="card-map-location__title">' . $locationName . '</h4><p class="card-map-location__description">' . $locationAddress . '</p></div><img class="card-map-location__image" src="' . $urlLocationImage . '"></div>',
+            'iconImage' =>  $urlLocationImage
+        );
+        array_push($locationDataArray, $dataLocation);
+    endwhile;
+    return $locationDataArray;
+}
+
+add_action('init', 'getLocation');
+
+add_filter('wpcf7_autop_or_not', '__return_false');

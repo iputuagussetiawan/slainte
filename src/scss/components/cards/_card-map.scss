@@ -1,0 +1,31 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+.card-map-location{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__info-container{
+        padding: 32px;
+    }
+
+    &__title{
+        font-size: 24px;
+        line-height: 146.5%;
+        text-transform: capitalize;
+        color: #000000;
+        font-family: $secondary-font;
+    }
+
+    &__description{
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: -0.025em;
+        text-indent: 4px;
+    }
+}

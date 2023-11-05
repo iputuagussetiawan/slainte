@@ -8,15 +8,13 @@ $postDate = new DateTime(get_the_date());
             <div class="single-news__grid">
                 <div class="single-news__inner">
                     <?php
-
                     if (have_posts()) :
-
                         while (have_posts()) : the_post();
                             wpb_set_post_views(get_the_ID());
                     ?>
                             <div class="section-title-wrapper text-center">
                                 <p class="section-title__subtitle">News</p>
-                                <h1 class="section-title"><?php the_title() ?> <?php echo wpb_get_post_views(get_the_ID()) ?></h1>
+                                <h1 class="section-title"><?php the_title() ?></h1>
                                 <p class="section-title__description"><?php echo $postDate->format('F d, Y'); ?> </p>
                             </div>
                             <?php
@@ -26,7 +24,6 @@ $postDate = new DateTime(get_the_date());
                                     <img class="single-news__image" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title() ?>">
                                 </div>
                             <?php endif; ?>
-
                             <div class="single-news__content">
                                 <?php
                                 the_content()
@@ -40,7 +37,7 @@ $postDate = new DateTime(get_the_date());
             </div>
         </div>
     </section>
-    <section class="readmore-news section-padding--bottom">
+    <section class="readmore-news section-padding">
         <div class="container">
             <div class="section-title-wrapper text-center">
                 <h2 class="section-title">
@@ -68,20 +65,17 @@ $postDate = new DateTime(get_the_date());
                             $postDescription = get_the_excerpt();
 
                         else :
-                            $postDescription = wp_trim_words(get_the_content(), 18);
+                            $postDescription = wp_trim_words(get_the_content(), 100);
                         endif;
-                        get_template_part('template-parts/components/cards/card', 'eight', array(
-                            'card-eight-image' =>  $ulrImagePost,
-                            'card-eight-title' => get_the_title()
+                        get_template_part('template-parts/components/cards/card', 'post', array(
+                            'card-image' => $ulrImagePost,
+                            'card-title' => get_the_title(),
+                            'card-description' => $postDescription,
                         ));
                     endwhile;
                     wp_reset_postdata();
-                ?>
-                <?php
                 else :
-                ?>
-                    <h3>Data Not Found</h3>
-                <?php
+                    get_template_part('template-parts/data', 'not-found');
                 endif;
                 ?>
             </div>

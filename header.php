@@ -28,14 +28,27 @@
     if (function_exists('wp_body_open')) {
         wp_body_open();
     }
+    if (is_page_template('page-wine.php')) {
+        $header_two = '--two';
+    } elseif (is_page_template('page-contact.php')) {
+        $header_two = '--three';
+    } elseif (is_page_template('page-people.php')) {
+        $header_two = '--three';
+    } elseif (is_page_template('page-blog.php')) {
+        $header_two = '--two';
+    } elseif (is_single()) {
+        $header_two = '--two';
+    } else {
+        $header_two = '';
+    }
     ?>
     <!-- PRE LOADER -->
-    <!-- <div class="preloader">
+    <div class="preloader">
         <div class="spinner">
             <span class="spinner-rotate"></span>
         </div>
-    </div> -->
-    <nav class="navbar-custom <?php echo $header_two ?> navbar navbar-expand-lg">
+    </div>
+    <nav class="navbar-custom navbar-custom<?php echo $header_two ?> navbar navbar-expand-lg">
         <div class="container">
             <div class="navbar-custom__logo-container">
                 <?php
@@ -44,7 +57,7 @@
                 }
                 ?>
             </div>
-            <!-- <button aria-label="navbar toggler" class="navbar-toggler navbar-custom__toggler" type="button">
+            <button aria-label="navbar toggler" class="navbar-toggler navbar-custom__toggler" type="button">
                 <span class="burger-wrapper">
                     <span id="hamburger" class="burger">
                         <svg width="45" height="45" viewBox="0 0 100 100">
@@ -54,9 +67,6 @@
                         </svg>
                     </span>
                 </span>
-            </button> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <?php
@@ -70,28 +80,6 @@
                     'walker' => new bootstrap_5_wp_nav_menu_walker()
                 ));
                 ?>
-                <ul class="navbar-nav navbar-custom__action-container">
-                    <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'secondary-menu',
-                        'container' => false,
-                        'menu_class' => ' navbar-custom__top-menu',
-                        'fallback_cb' => '__return_false',
-                        'items_wrap' => '<ul id="%1$s" class="navbar-nav%2$s">%3$s</ul>',
-                        'depth' => 2,
-                        'walker' => new bootstrap_5_wp_nav_menu_walker()
-                    ));
-                    ?>
-                    <!-- <li class="nav-item navbar-custom__action-item">
-                        <a id="btn-minishop" class="nav-link navbar-custom__action-link" href="javascript:void(0)">
-                            <iconify-icon class="navbar-custom__action-icon" width="24" icon="heroicons:shopping-bag"></iconify-icon>
-                            <span class="mini-cart-count"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item navbar-custom__action-item">
-                        tes
-                    </li> -->
-                </ul>
             </div>
         </div>
     </nav>

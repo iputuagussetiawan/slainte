@@ -2,66 +2,60 @@
 @use "../../config/_mixin.scss" as *;
 
 .card-one{
-    @include imageRatio(80,80,true, contain,'image-one');
-    padding: 32px;
-    //box-shadow: 0px 27px 72px rgba(48, 52, 77, 0.07), 0px 6.0308px 16.0821px rgba(48, 52, 77, 0.0417275), 0px 1.79553px 4.78807px rgba(48, 52, 77, 0.0282725);
-    border-radius: 12px;
-    background-color: $white;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 2fr 1fr;
-    row-gap: 16px;
+    position: relative;
+    @include imageRatio(502,512);
 
-    &__user-container{
-        display: flex;
-        align-items: center;
+    &:hover  &__image{
+        transform: scale(1.2);
     }
-    &__info-container{
-        padding-left: 16px;
+
+    &__image-container{
+        margin-bottom: 35px;
+        overflow: hidden;
     }
-    &__logo-container{
-        text-align: right;
+
+    &__image{
+        transition: 1s ease;
     }
-    &__name{
-        font-weight: 700;
+
+    &__category{
+        margin-bottom: 35px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.385em;
+        color: $black; 
+    }
+
+    &__title{
+        font-family: $secondary-font;
+        font-weight: 400;
         font-size: 24px;
         line-height: 30px;
-        color: $neutral-90;
+        color:$black
     }
-    &__position{
-        margin: 0px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        color: $neutral-80;
-    }
-    &__body{
-        grid-column: span 2;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
-        color: $neutral-90;
+
+    @media only screen and (max-width: 991.98px) {
+        &__image-container{
+            margin-bottom: 18px;
+        }
+
+        &__category{
+            margin-bottom: 18px;
+        }
     }
 
     @media only screen and (max-width: 767.98px) {
-        &__user-container{
-            grid-column: span 2 ;
-        }
-        &__logo-container{
-            order: 3;
-            grid-column: span 2 ;
-        }
-        &__name{
-            font-size: 20px;
-            line-height: 28px;
-        }
-        &__position{
-            font-size: 14px;
-            line-height: 18px;
-        }
-        &__body{
-            font-size: 16px;
-            line-height: 24px;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -37px;
+            width: 60%;
+            height: 1px;
+            transform: translateX(-50%);
+            border: 2px dashed rgba(0, 0, 0, 0.14);
+
         }
     }
 }

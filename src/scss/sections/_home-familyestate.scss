@@ -1,0 +1,87 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+.family-estate{
+    background-size: cover !important;
+    .wpcf7-not-valid-tip {
+        color: $white;
+        text-align: left;
+    }
+    .wpcf7-response-output{
+        display: none;
+    }
+    .wpcf7-spinner{
+        position: absolute;
+        top: 16px;
+        right: -60px;
+    }
+
+    .form-control-custom{
+        border-radius: 0px;
+        border: 1px solid $white;
+        color: $white;
+
+        &:focus{
+            border-color: $white;
+            background-color: transparent;
+        }
+
+        &::placeholder{
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    .btn-outline-secondary{
+        height: 54px;
+        padding: 18px 24px;
+        border-color: $white;
+        font-size: 20px;
+        letter-spacing: 0.25em;
+    }
+
+    &__title-wrapper{
+        padding:0px 72px ;
+    }
+
+    &__title{
+        margin-bottom: 37px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        letter-spacing: 0.385em;
+        text-indent: 4px;
+        color: $white;
+    }
+
+    &__description{
+        margin-bottom: 42px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 211.5%;
+        text-align: center;
+        text-indent: 4px;
+        color: $white;
+    }
+
+    &__form-container{
+        position: relative;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        gap: 32px;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+       .wpcf7-spinner {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+
+        &__form-container{
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+        
+    }
+}

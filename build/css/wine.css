@@ -1,0 +1,300 @@
+.wine-banner__container {
+  border-bottom: 1px dashed #000000;
+}
+.wine-banner__title {
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 66px;
+  line-height: 146.5%;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+}
+.wine-banner__description {
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 211.5%;
+  text-align: center;
+  color: #000000;
+}
+@media only screen and (max-width: 991.98px) {
+  .wine-banner__container {
+    position: relative;
+    border-bottom: none;
+  }
+  .wine-banner__container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 60%;
+    height: 1px;
+    transform: translateX(-50%);
+    border: 2px dashed rgba(0, 0, 0, 0.14);
+  }
+  .wine-banner__title {
+    margin-bottom: 24px;
+    font-size: 37px;
+  }
+  .wine-banner__description {
+    margin-bottom: 32px;
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .wine-banner__title {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .wine-banner__title {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 146.5%;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .wine-banner__description {
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 211.5%;
+    text-align: center;
+    color: #000000;
+  }
+}
+
+.card-product {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  align-items: flex-end;
+  padding-bottom: 98px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.14);
+}
+.card-product__image-container {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.card-product__image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.card-product__image-container:before {
+  content: "";
+  display: block;
+  padding-top: 154.3956043956%;
+}
+.card-product:last-child {
+  border-bottom: none;
+}
+.card-product:nth-child(even) {
+  grid-template-columns: 1fr 1fr 3fr;
+}
+.card-product:nth-child(even) .card-product__title {
+  grid-column: 3/4;
+  grid-row: 1;
+}
+.card-product:nth-child(even) .card-product__info-container {
+  grid-column: 3/4;
+  grid-row: 2;
+}
+.card-product:nth-child(even) .card-product__image-container {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+.card-product:nth-child(even) .card-product__specs-container {
+  grid-column: 1/2;
+  grid-row: 2;
+}
+.card-product__title {
+  margin: 0px;
+  grid-column: 1/2;
+  grid-row: 1;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 146.5%;
+  text-transform: capitalize;
+  color: #000000;
+}
+.card-product__info-container {
+  grid-column: 1/2;
+  grid-row: 2;
+}
+.card-product__image-container {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+.card-product__specs-container {
+  grid-column: 3/4;
+  grid-row: 2;
+}
+.card-product__sort-description {
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 211.5%;
+  color: #000000;
+}
+.card-product__specs-title {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 146.5%;
+  text-transform: capitalize;
+  color: #000000;
+}
+.card-product__specs {
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+}
+.card-product__specs-item {
+  position: relative;
+  display: flex;
+}
+.card-product__specs-label {
+  margin-bottom: 0px;
+  min-width: 120px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 203.5%;
+  color: #000000;
+}
+.card-product__specs-value {
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 203.5%;
+  color: #000000;
+}
+@media only screen and (max-width: 991.98px) {
+  .card-product {
+    position: relative;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding-bottom: 0px;
+  }
+  .card-product::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -36px;
+    width: 60%;
+    height: 1px;
+    transform: translateX(-50%);
+    border: 2px solid rgba(0, 0, 0, 0.14);
+  }
+  .card-product:nth-child(even) {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .card-product__title {
+    margin-bottom: 27px;
+    font-size: 42px;
+    line-height: 146.5%;
+  }
+  .card-product__sort-description {
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .card-product {
+    grid-template-columns: 1fr;
+    border-bottom: none;
+  }
+  .card-product:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+  .card-product__image-container, .card-product:nth-child(even) .card-product__image-container {
+    grid-row: 1;
+    grid-column: 1/-1;
+    margin-bottom: 32px;
+  }
+  .card-product__title, .card-product:nth-child(even) .card-product__title {
+    grid-row: 2;
+    grid-column: 1/-1;
+    margin-bottom: 27px;
+    font-size: 32px;
+    line-height: 146.5%;
+    text-align: center;
+  }
+  .card-product__specs-container, .card-product:nth-child(even) .card-product__specs-container {
+    text-align: center;
+    grid-row: 3;
+    grid-column: 1/-1;
+  }
+  .card-product__info-container, .card-product:nth-child(even) .card-product__info-container {
+    grid-row: 4;
+    grid-column: 1/-1;
+    text-align: center;
+  }
+  .card-product__specs {
+    position: relative;
+    margin-bottom: 62px;
+  }
+  .card-product__specs::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -36px;
+    width: 60%;
+    height: 1px;
+    transform: translateX(-50%);
+    border: 2px solid rgba(0, 0, 0, 0.14);
+  }
+  .card-product__specs-item {
+    justify-content: center;
+  }
+  .card-product__specs-title {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 146.5%;
+    text-align: center;
+  }
+  .card-product__specs-label {
+    padding-right: 10px;
+    position: relative;
+  }
+  .card-product__specs-label::before {
+    content: ":";
+    position: absolute;
+    right: 4px;
+    top: 0px;
+  }
+  .card-product__specs-label, .card-product__specs-value {
+    font-weight: 400;
+    margin-bottom: 0px;
+    min-width: unset;
+    font-size: 14px;
+    line-height: 203.5%;
+  }
+}
+
+.wine-products__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 140px;
+}
+@media only screen and (max-width: 991.98px) {
+  .wine-products {
+    margin-bottom: 100px;
+  }
+  .wine-products__grid {
+    gap: 62px;
+  }
+}
+
+/*# sourceMappingURL=wine.css.map*/

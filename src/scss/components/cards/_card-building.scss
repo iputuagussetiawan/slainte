@@ -1,0 +1,134 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-building {
+	background-color: #867E6F;
+	@include imageRatio(862, 759);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+
+	&:hover &__detail{
+		 opacity: 1;
+	}
+
+	&:nth-child(even) &__info-container {
+		order: 2;
+	}
+
+	&__image-container {
+		height: 100%;
+	}
+
+	&__info-container {
+		padding: 15% 10%;
+	}
+
+	&__title {
+		margin-bottom: 32px;
+		font-family: $secondary-font;
+		font-weight: 400;
+		font-size: 53px;
+		line-height: 121.5%;
+		color: $white;
+	}
+
+	&__description {
+		font-family: $secondary-font;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 211.5%;
+		color: $white;
+	}
+
+	&__imageInfo-wrapper{
+		position: relative;
+		height: 100%;
+		// padding: 20% 15%;
+		
+	}
+
+	&__detail{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		padding: 20% 10%;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+		z-index: 3;
+		opacity: 0;
+		transition: 0.4s ease;
+	}
+
+	&__openhour{
+		margin-bottom: 7px;
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 121.5%;
+		text-transform: capitalize;
+		color: $white;
+	}
+
+	&__detail-content{
+		margin: 32px 0px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 121.5%;
+		text-transform: capitalize;
+		color: $white;
+		p{
+			margin-bottom: 0px;
+		}
+	}
+
+	@media only screen and (max-width: 991.98px) {
+		&__title{
+			font-size: 42px;
+		}
+	}
+
+	@media only screen and (max-width: 767.98px) {
+		grid-template-columns: 1fr;
+		&__title{
+			font-size: 37px;
+		}
+		&__image-container {
+			order: 1;
+		}
+	
+		&__info-container {
+			order: 2;
+		}
+	}
+
+	@media only screen and (max-width: 575.98px) {
+		@include imageRatio(430, 207);
+		
+
+		&__title{
+			margin-bottom: 24px;
+			font-weight: 400;
+			font-size: 31px;
+			line-height: 121.5%;
+		}
+
+		&__image-container {
+			order: 1;
+		}
+	
+		&__info-container {
+			padding: 41px 45px;
+			order: 2;
+			text-align: center;
+		}
+
+		&__detail{
+			display: none;
+		}
+	}
+
+	
+}

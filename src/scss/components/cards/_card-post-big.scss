@@ -1,0 +1,101 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-post-big{
+    @include imageRatio(981,646);
+    position: relative;
+    margin-bottom: 64px;
+    display: inline-block;
+    z-index: 2;
+
+    &:last-child{
+        margin-bottom: 0px;
+    }
+
+    &:hover &__image{
+        transform: scale(1.2);
+    }
+
+    &__image-container{
+        overflow: hidden;
+        margin-bottom: 24px;
+    }
+
+    &__image{
+        transition: 1s ease;
+    }
+
+    &__author{
+        margin-bottom: 0px;
+        font-size: 12px;
+        line-height: 211.5%;
+        color: $black;
+        opacity: 0.31;
+    }
+    
+    &__title{
+        position: relative;
+        margin-bottom: 21px;
+        font-weight: 400;
+        font-family: $secondary-font;
+        font-size: 53px;
+        line-height: 146.5%;
+        text-transform: capitalize;
+        color: $black;
+        z-index: 2;
+        &:hover{
+            color: $primary;
+        }
+    }
+
+    &__content{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 211.5%;
+        color:$black;
+    }
+
+    &__readmore{
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 211.5%;
+        color: #61594A;
+        z-index: 2;
+        &:hover{
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    }
+
+    @media only screen and (max-width: 1399.98px) {
+        &__title{
+            margin-bottom: 18px;
+            font-size: 47px;
+        }
+    }
+
+    @media only screen and (max-width: 1199.98px) {
+        &__title{
+            font-size: 42px;
+        }
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__title{
+            font-size: 37px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &__title{
+            font-size: 32px;
+        }
+    }
+
+    @media only screen and (max-width: 575.98px) {
+        &__title{
+            font-size: 27px;
+        }
+    }
+}

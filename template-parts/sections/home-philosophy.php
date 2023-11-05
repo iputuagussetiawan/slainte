@@ -1,16 +1,22 @@
+<?php
+$pageHomeID = get_field('home_link', 'page_link')->ID;
+$pageHomeLink = get_permalink($pageHomeID);
+$phiTitle = get_field('home_welcome_title', $pageHomeID);
+$phiSubtitle = get_field('home_welcome_subtitle', $pageHomeID);
+$phiDescription = get_field('home_welcome_description', $pageHomeID);
+?>
 <section class="home-philosophy section-padding--top">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" data-aos="fade-up">
             <div class="col-md-6 text-center">
                 <p class="home-philosophy__subtitle">
-                    OUR PHILOSOPHY
+                    <?= $phiSubtitle; ?>
                 </p>
                 <h2 class="home-philosophy__title">
-                    You control the narrative of your own story,
-                    we help you share it with the world
+                    <?= $phiTitle; ?>
                 </h2>
                 <p class="home-philosophy__description">
-                    Since 2010, The Euphoria Co. has been a valuable source of inspiration for natural home and lifestyle design. Fairness, vibrant innovation social innovation outcomes. Systems thinking policymaker improve the world; green space mobilize green space movements fairness and human-centered technology. Circular relief collaborative consumption milestones entrepreneur program area, activate.
+                    <?= $phiDescription; ?>
                 </p>
             </div>
         </div>

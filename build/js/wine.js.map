@@ -1,0 +1,1 @@
+{"version":3,"file":"/build/js/wine.js","mappings":";;;;;AAAAA,KAAK,CAAC,WAAW,CAAC,C","sources":["webpack:///./src/js/pages/wine.js"],"sourcesContent":["alert('from wine');"],"names":["alert"],"sourceRoot":""}

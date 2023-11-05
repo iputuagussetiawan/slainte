@@ -1,144 +1,151 @@
-.contact-form .wpcf7-spinner {
-  position: absolute;
-  right: -57px;
-  top: 16px;
+.contact-form .btn {
+  border-radius: 8px;
+  padding: 22px 37px;
+}
+.contact-form__title {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 146.5%;
+}
+.contact-form__description {
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 211.5%;
+  color: #000000;
 }
 .contact-form__grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
-}
-.contact-form__inner {
-  grid-column: 2/12;
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(10, 1fr);
-}
-.contact-form__info-container {
-  grid-column: 1/5;
-}
-.contact-form__form-container {
-  grid-column: 6/11;
-}
-.contact-form__info-list {
-  list-style: none;
-  padding: 0px;
-}
-.contact-form__item {
-  margin-bottom: 16px;
-  font-size: 18px;
-  color: #404040;
-}
-.contact-form__icon {
-  position: relative;
-  top: 4px;
-  margin-right: 13.5px;
-  font-size: 21px;
-}
-.contact-form__link {
-  font-size: 18px;
-  color: #757575;
-}
-.contact-form__btn-wrapper {
-  position: relative;
-}
-@media only screen and (max-width: 1399.98px) {
-  .contact-form__inner {
-    grid-column: 1/13;
-  }
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
 }
 @media only screen and (max-width: 991.98px) {
-  .contact-form__inner {
-    gap: 40px;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .contact-form__info-container {
-    grid-column: unset;
-  }
-  .contact-form__form-container {
-    grid-column: unset;
-  }
-}
-@media only screen and (max-width: 767.98px) {
   .contact-form__grid {
+    grid-template-columns: repeat(1, 1fr);
     gap: 0px;
-  }
-  .contact-form__item {
-    font-size: 16px;
-  }
-  .contact-form__link {
-    font-size: 16px;
   }
 }
 
-.contact-details__grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
+.family-estate {
+  background-size: cover !important;
 }
-.contact-details__inner {
-  grid-column: 2/12;
+.family-estate .wpcf7-not-valid-tip {
+  color: #fff;
+  text-align: left;
 }
-.contact-details__location-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+.family-estate .wpcf7-response-output {
+  display: none;
 }
-.contact-details__location-title {
-  margin-bottom: 16px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  color: #0A0A0A;
-}
-.contact-details__location-list {
-  margin-bottom: 0px;
-  list-style: none;
-  padding: 0px;
-}
-.contact-details__location-item {
-  position: relative;
-  margin-bottom: 4px;
-  padding-left: 18px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: #404040;
-}
-.contact-details__location-item:last-child {
-  margin-bottom: 0px;
-}
-.contact-details__location-item::before {
-  content: "";
+.family-estate .wpcf7-spinner {
   position: absolute;
-  top: 8px;
-  left: 2px;
-  width: 8px;
-  height: 8px;
-  background-color: #0FD7BD;
-  border-radius: 100%;
+  top: 16px;
+  right: -60px;
 }
-@media only screen and (max-width: 1399.98px) {
-  .contact-details__inner {
-    grid-column: 1/13;
-  }
+.family-estate .form-control-custom {
+  border-radius: 0px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.family-estate .form-control-custom:focus {
+  border-color: #fff;
+  background-color: transparent;
+}
+.family-estate .form-control-custom::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.family-estate .form-control-custom::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.family-estate .btn-outline-secondary {
+  height: 54px;
+  padding: 18px 24px;
+  border-color: #fff;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+}
+.family-estate__title-wrapper {
+  padding: 0px 72px;
+}
+.family-estate__title {
+  margin-bottom: 37px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.385em;
+  text-indent: 4px;
+  color: #fff;
+}
+.family-estate__description {
+  margin-bottom: 42px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 211.5%;
+  text-align: center;
+  text-indent: 4px;
+  color: #fff;
+}
+.family-estate__form-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  gap: 32px;
 }
 @media only screen and (max-width: 991.98px) {
-  .contact-details__location-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+  .family-estate .wpcf7-spinner {
+    display: none;
   }
 }
 @media only screen and (max-width: 767.98px) {
-  .contact-details__location-title {
-    font-size: 24px;
-    line-height: 30px;
+  .family-estate__form-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 }
-@media only screen and (max-width: 575.98px) {
-  .contact-details__location-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
+
+.card-map-location {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.card-map-location__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-map-location__info-container {
+  padding: 32px;
+}
+.card-map-location__title {
+  font-size: 24px;
+  line-height: 146.5%;
+  text-transform: capitalize;
+  color: #000000;
+  font-family: "Libre Baskerville", serif;
+}
+.card-map-location__description {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.025em;
+  text-indent: 4px;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+}
+
+.gm-style-iw-d {
+  overflow: unset !important;
+}
+
+.gm-style .gm-style-iw-c {
+  border-radius: 20px;
+  padding: 0px;
+  border: 1px solid #867E6F;
+  box-shadow: 4px 12px 31px rgba(0, 0, 0, 0.42);
 }
 
 /*# sourceMappingURL=contact.css.map*/

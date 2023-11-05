@@ -1,0 +1,99 @@
+@use '../config/_variable.scss' as *;
+@use '../config/_mixin.scss' as *;
+
+.winemaker-founder{
+    @include imageRatio(1008,700);
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 72px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color:#867E6F; 
+    }
+
+    &__container{
+        position: relative;
+        z-index: 2;
+    }
+    &__grid{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        gap: 98px;
+        z-index: 2;
+    }
+
+    &__image-container{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            height: 120%;
+            border-radius: 100%;
+            background-color:#61594A;;
+            z-index: -1;
+        }
+    }
+    &__info-container{
+        margin-top: 80px;
+    }
+
+    &__description{
+        font-size: 16px;
+        line-height: 211.5%;
+        text-align: center;
+        text-indent: 4px;
+        color: $white;
+    }
+
+    @media only screen and (max-width: 991.98px) {
+        &__grid{
+            grid-template-columns: repeat(1,1fr);
+            align-items: flex-start;
+            gap: 0px;
+            z-index: 2;
+        }
+
+        &__info-container{
+            margin-top: 0px;
+        }
+
+        &__container{
+            max-width: 100%;
+            padding: 0px;
+        }
+
+        &__image-container{
+            &::after{
+               display: none;
+            }
+        }
+
+        &__info-container{
+            padding: 40px 36px;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                background-color: #676054;;
+                border-radius: 26px 26px 0px 0px;
+            }
+        }
+
+        &__description{
+            position: relative;
+        }
+    
+    }
+}

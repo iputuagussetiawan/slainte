@@ -1,0 +1,150 @@
+@use "../../config/_variable.scss" as *;
+@use "../../config/_mixin.scss" as *;
+
+.card-team{
+    position: relative;
+    background-color: $white;
+    min-height: 680px;
+    border: 1px solid #867E6F;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 52px;
+        left: 50%;
+        width: 240px;
+        height: 240px;
+        border: 1px solid $white;
+        border-radius: 100%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    &:hover  &__image-container{
+        clip-path: circle(640px at center 100px);
+        transition-delay: 0s;
+    }
+
+    &:hover &__title{
+        color: $white;
+        opacity: 1;
+        transform: translateY(0px);
+        transition-delay: 0s;
+    }
+
+    &:hover &__position{
+        color: $white;
+        opacity: 1;
+        transform: translateY(0px);
+        transition-delay: 0s;
+    }
+
+    &:hover &__description{
+        color: $white;
+        opacity: 1;
+        transform: translateY(0px);
+        transition-delay: 0s;
+    }
+
+    &:hover &__social-icon path{
+        fill: $white;
+        transition-delay: 0s;
+    }
+
+
+    &__image-container{
+        clip-path: circle(118px at center 170px);
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        transition: 0.5s ease;
+        transition-delay: 0.5s;
+    }
+
+    &__image{
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+    }
+    
+
+    &__info-container{
+        position: absolute;
+        bottom: 0px;
+        padding: 16px;
+        padding-top: 100%;
+        text-align: center;
+        z-index: 2;
+    }
+
+    &__title{
+        margin-bottom: 13px;
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 35px;
+        color: $black;
+        //opacity: 0;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        //transform: translateY(20px);
+    }
+
+    &__position{
+        margin-bottom: 16px;
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 211.5%;
+        text-align: center;
+        //opacity: 0;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        //transform: translateY(20px);
+    }
+
+    &__description{
+        margin-bottom: 32px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 211.5%;
+        text-align: center;
+        //opacity: 0;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        //transform: translateY(20px);
+    }
+
+    &__social-icon{
+        list-style: none;
+        padding: 0px;
+        transition: 0.5s ease;
+
+        path{
+            transition: 0.5s ease;
+            transition-delay: 0.5s;
+        }
+    }
+
+    &__social-item{
+        display: inline-block;
+        margin-right: 19px;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &::before{
+            top: 40px;
+            left: 50%;
+            width: 185px;
+            height: 185px;
+        }
+        &__image-container{
+            clip-path: circle(90px at center 131px);
+        }
+    }
+}

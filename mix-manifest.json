@@ -1,6 +1,18 @@
 {
     "/build/js/app.js": "/build/js/app.js",
     "/build/js/home.js": "/build/js/home.js",
+    "/build/js/wine.js": "/build/js/wine.js",
+    "/build/js/people.js": "/build/js/people.js",
+    "/build/js/winemaker.js": "/build/js/winemaker.js",
+    "/build/js/about.js": "/build/js/about.js",
+    "/build/js/contact.js": "/build/js/contact.js",
+    "/build/js/blog.js": "/build/js/blog.js",
+    "/build/css/winemaker.css": "/build/css/winemaker.css",
+    "/build/css/people.css": "/build/css/people.css",
+    "/build/css/wine.css": "/build/css/wine.css",
+    "/build/css/home.css": "/build/css/home.css",
     "/build/css/app.css": "/build/css/app.css",
-    "/build/css/home.css": "/build/css/home.css"
+    "/build/css/blog.css": "/build/css/blog.css",
+    "/build/css/contact.css": "/build/css/contact.css",
+    "/build/css/about.css": "/build/css/about.css"
 }

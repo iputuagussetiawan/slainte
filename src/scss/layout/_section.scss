@@ -82,6 +82,7 @@
 	position: relative;
 	margin-bottom: var(--margin-bottom-section-title);
 	font-weight: 700;
+	font-family: $secondary-font;
 	font-size: var(--font-size-section-title);
 	line-height: var(--line-height-section-title) ;
 	text-transform: capitalize;
@@ -93,7 +94,7 @@
 		font-weight: 500;
 		font-size: 18px;
 		line-height: 28px;
-		color: $secondary-80;
+		color: #867E6F;
 	}
 
 	&__description {

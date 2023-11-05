@@ -1,1 +1,19 @@
 @use "../sections/_banner.scss" as *;
+@use "../sections/_home-philosophy.scss" as *;
+@use "../sections/_home-behind.scss" as *;
+@use "../sections/_home-media.scss" as *;
+@use "../sections/_home-familyestate" as *;
+
+@media only screen and (max-width: 991.98px) {
+    .navbar-custom__logo-container{
+       img{
+            display: none;
+       }
+    }
+
+    .navbar-custom.sticky .navbar-custom__logo-container{
+        img{
+            display: block;
+        }
+    }
+}

@@ -11,8 +11,8 @@
     "/build/css/people.css": "/build/css/people.css",
     "/build/css/wine.css": "/build/css/wine.css",
     "/build/css/home.css": "/build/css/home.css",
-    "/build/css/app.css": "/build/css/app.css",
     "/build/css/blog.css": "/build/css/blog.css",
     "/build/css/contact.css": "/build/css/contact.css",
-    "/build/css/about.css": "/build/css/about.css"
+    "/build/css/about.css": "/build/css/about.css",
+    "/build/css/app.css": "/build/css/app.css"
 }

@@ -11079,8 +11079,8 @@ a:hover {
   .navbar-custom .navbar-nav .nav-item .nav-link, .navbar-custom--two .navbar-nav .nav-item .nav-link, .navbar-custom--three .navbar-nav .nav-item .nav-link {
     position: relative;
     padding: 8px 10px;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 20px;
   }
   .navbar-custom .dropdown-toggle::after, .navbar-custom--two .dropdown-toggle::after, .navbar-custom--three .dropdown-toggle::after {
     width: 14px;
@@ -11503,7 +11503,7 @@ main {
 
 .footer-copyright {
   display: grid;
-  grid-template-columns: auto 20%;
+  grid-template-columns: auto 30%;
   align-items: center;
   background: #B6B2A9;
   padding: 56px 60px;
@@ -11514,6 +11514,11 @@ main {
 }
 .footer-copyright__text {
   margin-bottom: 0px;
+}
+.footer-copyright__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @media only screen and (max-width: 991.98px) {
   .footer-copyright {

@@ -90,7 +90,7 @@
 .family-estate__form-container {
   position: relative;
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr;
   gap: 32px;
 }
 @media only screen and (max-width: 991.98px) {

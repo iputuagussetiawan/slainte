@@ -7,23 +7,18 @@
  */
 
 $about_company = get_field('about_company', 'company-setting');
+$pageContactID = get_field('contact_link', 'page_link')->ID;
+$pageContactLink = get_permalink($pageContactID);
+$page_contact_title = get_field('page_contact_title', $pageContactID);
+$page_contact_description = get_field('page_contact_description', $pageContactID);
+
+
 ?>
 <footer class="footer">
     <div class="container section-padding">
         <div class="footer__grid">
-            <div class="footer__gallery-container">
-                <?php
-                $images = get_field('company_gallery', 'company-setting');
-                if ($images) : ?>
-                    <?php foreach ($images as $image) : ?>
-                        <a href="<?php echo esc_url($image['url']); ?>" class="footer__gallery-image-container">
-                            <img class="footer__gallery-image" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-                        </a>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-            </div>
-
-            <div class="footer__info">
+            <div class="footer__info text-white">
+                <h3 class="footer__menu-title">Our Company</h3>
                 <?= $about_company; ?>
             </div>
             <div class="footer__menu-container">
@@ -40,32 +35,33 @@ $about_company = get_field('about_company', 'company-setting');
                     );
                     wp_nav_menu($args);
                     ?>
-                    <!-- <ul class="footer__menus">
-                        <li class="footer__menu-item">
-                            <a href="#" class="footer__menu-link">HOME</a>
-                        </li>
-                    </ul> -->
                 </div>
-                <!-- <div class="footer__menu">
-                    <h3 class="footer__menu-title">Blog</h3>
-                    <ul class="footer__menus">
-                        <?php
-                        $args = array(
-                            'hide_empty'          => 0,
-                        );
-                        $categories = get_categories($args);
-                        foreach ($categories as $category) :
-                        ?>
-                            <li class="footer__menu-item">
-                                <a href="<?php echo get_category_link($category->term_id); ?>" class="footer__menu-link"><?php echo $category->name ?></a>
-                            </li>
-                        <?php
-                        endforeach;
-                        ?>
-
-                    </ul>
-                </div> -->
             </div>
+            <div class="footer__gallery-container">
+                <?php
+                $images = get_field('company_gallery', 'company-setting');
+                if ($images) : ?>
+                    <?php foreach ($images as $image) : ?>
+                        <a href="<?php echo esc_url($image['url']); ?>" class="footer__gallery-image-container">
+                            <img class="footer__gallery-image" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                        </a>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+
+            <div class="footer__form-container">
+                <h3 class="footer__menu-title mb-1">
+                    <?= $page_contact_title; ?>
+                </h3>
+                <p class="contact-form__description">
+                    <?= $page_contact_description; ?>
+                </p>
+                <?php
+                echo do_shortcode('[contact-form-7 id="398" title="Contact form"]');
+                ?>
+            </div>
+
+           
 
         </div>
     </div>

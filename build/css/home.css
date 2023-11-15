@@ -114,6 +114,10 @@
   .banner__image-container {
     grid-row: 1;
     grid-column: 1/13;
+    background-color: #000000;
+  }
+  .banner__image {
+    opacity: 0.1;
   }
   .banner__info-container {
     grid-row: 2;

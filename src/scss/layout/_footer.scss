@@ -2,10 +2,24 @@
 @use "../config/_mixin.scss" as *;
 
 .footer {
-	@include imageRatio(205,205,true,cover,'gallery-image');
+	@include imageRatio(205,205,false,cover,'gallery-image');
 	background: rgba(134, 126, 111, 0.7);
+	.form-control-custom {
+		border-radius: 0px;
+		border: 2px solid #867E6F;
+		color: #867E6F;
+	}
+	.country-name{
+		color: #000;
+	}
+
+	.form-label,
+	.wpcf7-list-item-label,
+	.contact-form__description{
+		color: #fff;
+	}
 	&__grid{
-		margin-bottom: 100px;
+		// margin-bottom: 100px;
 		display: grid;
 		grid-template-columns: repeat(12,1fr);
 		gap: 31px;
@@ -15,16 +29,20 @@
 		display: grid;
 		grid-template-columns: repeat(2,1fr);
 		gap: 31px;
-		grid-row: span 2;
+		// grid-row: span 2;
 	}
 	&__gallery-image-container{
 		display: inline-block;
 	}
 
-	&__info{
+	&__form-container{
 		grid-column: 6/13;
-		color: $white;
-		border-bottom: 1px solid $white;
+		// color: $white;
+		border-bottom: 1px solid #867E6F;;
+	}
+
+	&__info{
+		grid-column: 1/5;
 	}
 
 	&__menu-container{
@@ -78,6 +96,8 @@
 	}
 
 
+
+
 	@media only screen and (max-width: 991.98px) {
 		&__gallery-container{
 			display: none;
@@ -125,7 +145,7 @@
 	grid-template-columns: auto 30%;
 	align-items: center;
 	background: #B6B2A9;
-	padding: 56px 60px;
+	padding: 24px 60px;
 	color: $white;
 
 	a{

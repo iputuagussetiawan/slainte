@@ -30,11 +30,11 @@ label {
 
 	&:focus {
 		border: 2px solid #867E6F;
-		background-color: $white;
+		background-color: transparent;
 	}
 
 	&::placeholder{
-		color: $neutral-60;
+		color: #867E6F;
 	}
 
 	&.wpcf7-not-valid{

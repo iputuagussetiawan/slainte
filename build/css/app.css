@@ -11044,8 +11044,11 @@ a:hover {
   outline: none;
   box-shadow: none;
 }
-.navbar-custom--two.sticky .navbar-brand img {
+.navbar-custom--two .navbar-brand img {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.navbar-custom--two.sticky .navbar-brand img {
+  filter: unset;
 }
 .navbar-custom--two.sticky .navbar-nav .nav-item .nav-link {
   color: #fff;
@@ -11059,9 +11062,6 @@ a:hover {
 }
 .navbar-custom--two .navbar-nav .nav-contact .nav-link:hover {
   background-color: #61594A;
-}
-.navbar-custom--two .navbar-brand img {
-  filter: unset;
 }
 .navbar-custom--two .burger .line {
   stroke: #000000;
@@ -11158,7 +11158,6 @@ a:hover {
 .navbar-brand img {
   max-width: 80px;
   height: auto;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
   transition: 0.4s ease;
 }
 @media only screen and (max-width: 1399.98px) {
@@ -11382,8 +11381,7 @@ main {
 .footer__gallery-image-container {
   position: relative;
   width: 100%;
-  display: inline-block;
-  max-width: 205px;
+  display: block;
 }
 .footer__gallery-image-container img {
   position: absolute;
@@ -11399,8 +11397,20 @@ main {
   display: block;
   padding-top: 100%;
 }
+.footer .form-control-custom {
+  border-radius: 0px;
+  border: 2px solid #867E6F;
+  color: #867E6F;
+}
+.footer .country-name {
+  color: #000;
+}
+.footer .form-label,
+.footer .wpcf7-list-item-label,
+.footer .contact-form__description {
+  color: #fff;
+}
 .footer__grid {
-  margin-bottom: 100px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 31px;
@@ -11410,15 +11420,16 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 31px;
-  grid-row: span 2;
 }
 .footer__gallery-image-container {
   display: inline-block;
 }
-.footer__info {
+.footer__form-container {
   grid-column: 6/13;
-  color: #fff;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #867E6F;
+}
+.footer__info {
+  grid-column: 1/5;
 }
 .footer__menu-container {
   grid-column: 6/13;
@@ -11506,7 +11517,7 @@ main {
   grid-template-columns: auto 30%;
   align-items: center;
   background: #B6B2A9;
-  padding: 56px 60px;
+  padding: 24px 60px;
   color: #fff;
 }
 .footer-copyright a {
@@ -11681,14 +11692,14 @@ label {
 .form-control-custom:focus,
 .input-text:focus {
   border: 2px solid #867E6F;
-  background-color: #fff;
+  background-color: transparent;
 }
 .form-control-custom::-moz-placeholder, .input-text::-moz-placeholder {
-  color: #9E9E9E;
+  color: #867E6F;
 }
 .form-control-custom::placeholder,
 .input-text::placeholder {
-  color: #9E9E9E;
+  color: #867E6F;
 }
 .form-control-custom.wpcf7-not-valid,
 .input-text.wpcf7-not-valid {
@@ -11748,6 +11759,36 @@ label {
 @media only screen and (max-width: 991.98px) {
   .form-subscriber .wpcf7-not-valid-tip {
     text-align: center;
+  }
+}
+
+.contact-form .btn {
+  border-radius: 8px;
+  padding: 22px 37px;
+}
+.contact-form__title {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 146.5%;
+}
+.contact-form__description {
+  font-family: "Libre Baskerville", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 211.5%;
+  color: #000000;
+}
+.contact-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+}
+@media only screen and (max-width: 991.98px) {
+  .contact-form__grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
   }
 }
 

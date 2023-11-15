@@ -46,7 +46,7 @@ $about_company = get_field('about_company', 'company-setting');
                         </li>
                     </ul> -->
                 </div>
-                <div class="footer__menu">
+                <!-- <div class="footer__menu">
                     <h3 class="footer__menu-title">Blog</h3>
                     <ul class="footer__menus">
                         <?php
@@ -64,7 +64,7 @@ $about_company = get_field('about_company', 'company-setting');
                         ?>
 
                     </ul>
-                </div>
+                </div> -->
             </div>
 
         </div>

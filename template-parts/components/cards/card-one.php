@@ -8,9 +8,13 @@ if ($args['card-one-title']) {
     $cardOneTitle = $args['card-one-title'];
 }
 
+if ($args['card-one-link']) {
+    $cardOneLink = $args['card-one-link'];
+}
+
 ?>
 <div class="card-one">
-    <a href="<?php the_permalink() ?>" class="card-one__image-container">
+    <a href="<?php echo $cardOneLink ?>" class="card-one__image-container">
         <img class="card-one__image" src="<?= $cardOneImage; ?>" alt="<?= $cardOneTitle; ?>">
     </a>
     <div class="card-one__info-container">
@@ -25,6 +29,6 @@ if ($args['card-one-title']) {
             ?>
         </div>
 
-        <a href="<?php the_permalink() ?>" class="card-one__title"><?= $cardOneTitle; ?></a>
+        <a href="<?php echo $cardOneLink ?>" class="card-one__title"><?= $cardOneTitle; ?></a>
     </div>
 </div>

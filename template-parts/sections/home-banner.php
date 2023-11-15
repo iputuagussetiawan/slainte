@@ -43,10 +43,10 @@
     <div class="container banner__container">
         <div class="form-subscriber">
             <p class="form-subscriber__subtitle">
-                O'ROURKE FAMILY ESTATE WINERY
+                “O'ROURKE FAMILY ESTATE WINERY
             </p>
-            <h1 class="form-subscriber__title">Stay in the know. Sign up to receive project updates, wine access and special event details.</h1>
-            <p class="form-subscriber__description">Your privacy is important to us.</p>
+            <h1 class="form-subscriber__title">Stay in the know. Sign up to receive updates, access to wine, and special event details.</h1>
+            <p class="form-subscriber__description">Your privacy is important to us.”</p>
             <?php
             echo do_shortcode('[contact-form-7 id="489" title="Banner Home Subscriber"]');
             ?>

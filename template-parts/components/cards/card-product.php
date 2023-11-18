@@ -1,31 +1,12 @@
 <?php
-if ($args['card-product-image']) {
-    $cardProductImage = $args['card-product-image'];
-}
-
-if ($args['card-product-title']) {
-    $cardProductTitle = $args['card-product-title'];
-}
-
-if ($args['card-product-description']) {
-    $cardProductDescription = $args['card-product-description'];
-}
-
-if ($args['card-product-vintage']) {
-    $cardProductVintage = $args['card-product-vintage'];
-}
-
-if ($args['card-product-varietal']) {
-    $cardProductVarietal = $args['card-product-varietal'];
-}
-
-if ($args['card-product-appellation']) {
-    $cardProductAppellation = $args['card-product-appellation'];
-}
-
-if ($args['card-product-alcohol-percentage']) {
-    $cardProductAlcohol = $args['card-product-alcohol-percentage'];
-}
+    $cardProductTitle=isset($args['card-product-title']) ? $args['card-product-title'] : null ;
+    $cardProductDescription=isset($args['card-product-description']) ? $args['card-product-description'] : null ;
+    $cardProductColor=isset($args['card-product-color']) ? $args['card-product-color'] : null ;
+    $cardProductAroma=isset($args['card-product-aroma']) ? $args['card-product-aroma'] : null ;
+    $cardProductFlavour=isset($args['card-product-flavour']) ? $args['card-product-flavour'] : null ;
+    $cardProductAlcoholPercentage=isset($args['card-product-alcohol-percentage']) ? $args['card-product-alcohol-percentage'] : null ;
+    $cardProductCellaring=isset($args['card-product-cellaring']) ? $args['card-product-cellaring'] : null ;
+    $cardProductImage=isset($args['card-product-image']) ? $args['card-product-image'] : null ;
 ?>
 
 <div class="card-product" data-aos="fade-up" data-aos-delay="300">

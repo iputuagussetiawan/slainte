@@ -148,3 +148,90 @@
         }
     }
 }
+
+.card-team-two{
+    @include imageRatio(235,235,true);
+    position: relative;
+    background-color: $white;
+    min-height: 480px;
+    border: 1px solid #867E6F;
+    text-align: center;
+    padding: 50px 32px;
+
+    &__image-container{
+        margin: 0px auto;
+        margin-bottom: 32px;
+        overflow: hidden;
+        border-radius: 100%;
+    }
+
+    &__title{
+        margin-bottom: 13px;
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 35px;
+        color: $black;
+        //opacity: 0;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        //transform: translateY(20px);
+    }
+
+    &__position{
+        margin-bottom: 16px;
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 211.5%;
+        text-align: center;
+        //opacity: 0;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        //transform: translateY(20px);
+    }
+
+    &__description{
+        margin-bottom: 32px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 211.5%;
+        text-align: center;
+        //opacity: 0;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        //transform: translateY(20px);
+    }
+
+    &__social-icon{
+        margin: 0px;
+        list-style: none;
+        padding: 0px;
+        transition: 0.5s ease;
+
+        path{
+            transition: 0.5s ease;
+            transition-delay: 0.5s;
+        }
+    }
+
+    &__social-item{
+        display: inline-block;
+        margin-right: 19px;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+
+    @media only screen and (max-width: 767.98px) {
+        &::before{
+            top: 40px;
+            left: 50%;
+            width: 185px;
+            height: 185px;
+        }
+        &__image-container{
+            clip-path: circle(90px at center 131px);
+        }
+    }
+}

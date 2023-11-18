@@ -14,8 +14,8 @@ $page_contact_description = get_field('page_contact_description', $pageContactID
 
 
 ?>
-<footer class="footer">
-    <div class="container section-padding">
+<footer class="footer section-padding--top">
+    <div class="container ">
         <div class="footer__grid">
             <div class="footer__info text-white">
                 <h3 class="footer__menu-title">Our Company</h3>

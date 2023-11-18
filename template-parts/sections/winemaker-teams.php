@@ -50,7 +50,7 @@ $team_maker_description = get_field('team_maker_description', $pageWineMakerID);
                     else :
                         $teamDescription = wp_trim_words(get_the_content(), 100);
                     endif;
-                    get_template_part('template-parts/components/cards/card', 'team', array(
+                    get_template_part('template-parts/components/cards/card', 'team-two', array(
                         'card-team-image' =>   $urlTeam_thumbnail,
                         'card-team-title' =>  $team_title,
                         'card-team-description' =>  $teamDescription,

@@ -126,6 +126,99 @@
   }
 }
 
+.card-team-two {
+  position: relative;
+  background-color: #fff;
+  min-height: 480px;
+  border: 1px solid #867E6F;
+  text-align: center;
+  padding: 50px 32px;
+}
+.card-team-two__image-container {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  max-width: 235px;
+}
+.card-team-two__image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-team-two__image-container:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.card-team-two__image-container {
+  margin: 0px auto;
+  margin-bottom: 32px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.card-team-two__title {
+  margin-bottom: 13px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 35px;
+  color: #000000;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.card-team-two__position {
+  margin-bottom: 16px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 211.5%;
+  text-align: center;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.card-team-two__description {
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 211.5%;
+  text-align: center;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.card-team-two__social-icon {
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+  transition: 0.5s ease;
+}
+.card-team-two__social-icon path {
+  transition: 0.5s ease;
+  transition-delay: 0.5s;
+}
+.card-team-two__social-item {
+  display: inline-block;
+  margin-right: 19px;
+}
+.card-team-two__social-item:last-child {
+  margin-right: 0px;
+}
+@media only screen and (max-width: 767.98px) {
+  .card-team-two::before {
+    top: 40px;
+    left: 50%;
+    width: 185px;
+    height: 185px;
+  }
+  .card-team-two__image-container {
+    -webkit-clip-path: circle(90px at center 131px);
+            clip-path: circle(90px at center 131px);
+  }
+}
+
 .team__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -356,8 +449,10 @@
 }
 .winemaker-teams__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  width: 80%;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 1399.98px) {
   .winemaker-teams__grid {
@@ -369,6 +464,7 @@
   .winemaker-teams__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 575.98px) {

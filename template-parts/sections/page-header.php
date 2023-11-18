@@ -16,7 +16,7 @@ endif;
     </div>
     <div class="container page-header__container">
         <div class="row justify-content-center text-center">
-            <div class="col-md-10">
+            <div class="col-md-8">
                 <h1 class="page-header__title" data-aos="fade-up">
                     <?= $pageHeaderTitle; ?>
                 </h1>
